@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Circle positive = new Circle();
+            Circle negative = new Circle();
+            Circle zero = new Circle();
         }
     }
 }
