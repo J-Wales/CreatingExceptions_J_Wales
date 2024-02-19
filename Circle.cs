@@ -8,22 +8,23 @@ namespace CreatingExceptions
 {
     internal class Circle
     {
-        // Create and initialize the Radius double.
-        public double Radius { get; init; }
+        // Create the Radius double.
+        public double Radius;
 
         // Create the SetRadius() method.
-        public void SetRadius()
+        public void SetRadius(double radius)
         {
             // Check if the value of Radius is less than or equal to 0.
-            if (Radius <= 0)
+            if (radius <= 0)
             {
                 // Throw the InvalidRadiusException constructor which accepts an argument.
-                throw new InvalidRadiusException(Radius);
+                throw new InvalidRadiusException(radius);
             }
             // Otherwise (if the value of Radius is greater than 0).
             else
             {
                 // Throw the InvalidRadiusException constructor which accepts no arguments.
+                Radius = radius;
                 throw new InvalidRadiusException();
             }
         }
